@@ -10,7 +10,7 @@ public class Slash {
                 if (cell == row) {
                     left = true;
                 }
-                if ((row * size - 1) == 0 || (row + cell + 1) == size) {
+                if ((row + cell + 1) == size) {
                     right = true;
                 }
 
@@ -31,6 +31,6 @@ public class Slash {
         System.out.println("Draw by 3");
         draw(3);
         System.out.println("Draw by 5");
-        draw(5);
+        draw(9);
     }
 }
