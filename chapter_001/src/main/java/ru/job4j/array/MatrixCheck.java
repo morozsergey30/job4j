@@ -15,18 +15,16 @@ public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         boolean result = false;
         for (int row = 0; row < board.length; row++) {
-            for (int cell = row; cell < board.length; cell++) {
-                char sign = board[row][cell];
+                char sign = board[row][row];
                 System.out.print(sign);
-
-                if (sign == 'X') {
+                    if (sign == 'X') {
                     int countVertical = 0;
                     int countHorizontal = 0;
                     for (int i = 0; i < board.length; i++) {
-                        if (board[row][i] == 'X'){
+                        if (board[row][i] == 'X') {
                             countHorizontal++;
                         }
-                        if (board[i][cell] == 'X') {
+                        if (board[i][row] == 'X') {
                             countVertical++;
                         }
                     }
@@ -38,7 +36,6 @@ public class MatrixCheck {
                         return result;
                     }
                 }
-            }
             System.out.println();
         }
         return result;
