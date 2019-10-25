@@ -13,20 +13,29 @@ public class MatrixCheck {
      * @return - результат поиска комбинации
      */
     public static boolean isWin(char[][] board) {
-        boolean result = true;
-        int index = 0;
+        boolean result = false;
         for (int row = 0; row < board.length; row++) {
-            for (int cell = 0; cell < board.length; cell++) {
+            for (int cell = row; cell < board.length; cell++) {
                 char sign = board[row][cell];
                 System.out.print(sign);
-                for (int i = 0; i < board.length; i++) {
-                    if (sign != board[row][i]) {
-                        for (int j = 0; j < board.length; j++) {
-                            if (board[row][i] != board[j][i]) {
-                                result = false;
-                                return result;
-                            }
+
+                if (sign == 'X') {
+                    int countVertical = 0;
+                    int countHorizontal = 0;
+                    for (int i = 0; i < board.length; i++) {
+                        if (board[row][i] == 'X'){
+                            countHorizontal++;
                         }
+                        if (board[i][cell] == 'X') {
+                            countVertical++;
+                        }
+                    }
+                    if (countVertical == 5 || countHorizontal == 5) {
+                        result = true;
+                        return result;
+                    } else {
+                        result = false;
+                        return result;
                     }
                 }
             }
