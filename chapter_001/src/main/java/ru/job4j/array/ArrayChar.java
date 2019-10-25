@@ -12,15 +12,11 @@ public class ArrayChar {
      * @return результат проверки true/false
      */
     public static boolean startsWith(char[] word, char[] pref) {
-        boolean result = false;
-        int count = 0;
+        boolean result = true;
         for (int i = 0; i < pref.length; i++) {
-            if (pref[i] == word[i]) {
-                count++;
+            if (pref[i] != word[i]) {
+               result = false;
             }
-        }
-        if (count == pref.length) {
-            result = true;
         }
         return result;
     }
