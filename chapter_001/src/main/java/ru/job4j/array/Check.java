@@ -11,15 +11,11 @@ public class Check {
      * @return - логическая переменная, означающая однородный или не однородный массив
      */
     public boolean mono(boolean[] data) {
-        boolean result = false;
-        int count = 0;
+        boolean result = true;
         for (int i = 1; i < data.length; i++) {
-            if (data[0] == data[i]) {
-                count++;
+            if (data[0] != data[i]) {
+                result = false;
             }
-        }
-        if (count == (data.length - 1)){
-            result = true;
         }
         return result;
     }
