@@ -26,7 +26,7 @@ public class MatrixCheck {
                             countVertical++;
                         }
                     }
-                    if (countVertical == 5 || countHorizontal == 5) {
+                    if (countVertical == board.length || countHorizontal == board.length) {
                         result = true;
                         return result;
                     } else {
