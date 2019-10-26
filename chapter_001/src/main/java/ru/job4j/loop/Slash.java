@@ -6,14 +6,12 @@ public class Slash {
             for (int cell = 0; cell < size; cell++) {
                 boolean left = false;
                 boolean right = false;
-
                 if (cell == row) {
                     left = true;
                 }
                 if ((row + cell + 1) == size) {
                     right = true;
                 }
-
                 if (left) {
                     System.out.print("0");
                 } else if (right) {
@@ -26,7 +24,6 @@ public class Slash {
         }
         System.out.println();
     }
-
     public static void main(String[] args) {
         System.out.println("Draw by 3");
         draw(3);

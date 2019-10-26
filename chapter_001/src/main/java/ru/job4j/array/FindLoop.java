@@ -1,16 +1,14 @@
 package ru.job4j.array;
-
 /**
- * FindLoop Класс определяет наличие элемента в массиве
- * @author morozsergey30 (karandash.zapiskin@gmail.com)
+ * FindLoop Класс определяет наличие элемента в массиве.
+ * @author morozsergey30 (karandash.zapiskin@gmail.com).
  */
 public class FindLoop {
-
     /**
-     * indexOf Метод определяет наличие принятого элеманта в принятом масииве
-     * @param data - массив чисел
-     * @param el - элемент для поиска
-     * @return - индекс элемента или -1 если элемент найден не был
+     * indexOf Метод определяет наличие принятого элеманта в принятом масииве.
+     * @param data - массив чисел.
+     * @param el - элемент для поиска.
+     * @return - индекс элемента или -1 если элемент найден не был.
      */
     public int indexOf(int[] data, int el) {
         int rst = -1;

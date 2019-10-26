@@ -1,15 +1,13 @@
 package ru.job4j.array;
-
 /**
- * Defragment Класс выполняет дефрагментацию массива строк
- * @author morozsergey30 (karandash.zapiskin@gmail.com)
- */
-
+ * Defragment Класс выполняет дефрагментацию массива строк.
+ * @author morozsergey30 (karandash.zapiskin@gmail.com).
+ * */
 public class Defragment {
     /**
-     * compress Метод принимает массив строк и выполняет его дефрагментацию
-     * @param array - не дефрагментированный массив строк
-     * @return - дефрагментированный массив
+     * compress Метод принимает массив строк и выполняет его дефрагментацию.
+     * @param array - не дефрагментированный массив строк.
+     * @return - дефрагментированный массив.
      */
     public static String[] compress(String[] array) {
         for (int index = 0; index < array.length; index++) {
@@ -29,10 +27,9 @@ public class Defragment {
         }
         return array;
     }
-
     /**
-     * main Главный метод, здесь используется для ручного тестирования метода compress
-     * @param args - args
+     * main Главный метод, здесь используется для ручного тестирования метода compress.
+     * @param args - args.
      */
     public static void main(String[] args) {
         String[] input = {"I", null, "wanna", null, "be", null, "compressed"};

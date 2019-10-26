@@ -1,16 +1,14 @@
 package ru.job4j.array;
-
 /**
- *  MatrixCheck Класс ищет выигрышную комбинацию из 5 символов в матрице
- *   @author morozsergey30 (karandash.zapiskin@gmail.com)
+ *  MatrixCheck Класс ищет выигрышную комбинацию из 5 символов в матрице.
+ *  @author morozsergey30 (karandash.zapiskin@gmail.com).
  */
 public class MatrixCheck {
-
     /**
      * isWin Метод принимает доску с символами и ищет на ней строку или столбец из пяти последовательно стоящих
      *       одинаковых символов.
-     * @param board - матрица для поиска выигрышной комбинации
-     * @return - результат поиска комбинации
+     * @param board - матрица для поиска выигрышной комбинации.
+     * @return - результат поиска комбинации.
      */
     public static boolean isWin(char[][] board) {
         boolean result = false;
@@ -40,7 +38,10 @@ public class MatrixCheck {
         }
         return result;
     }
-
+    /**
+     * main Главный метод. Здесь используется для ручного тестирования.
+     * @param args - args.
+     */
     public static void main(String[] args) {
         char[][] hasWinVertical = {
                 {'_', '_', 'X', '_', '_'},
@@ -72,5 +73,4 @@ public class MatrixCheck {
         boolean lose = isWin(notWin);
         System.out.println("A board has a winner : " + lose);
     }
-
 }
