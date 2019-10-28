@@ -23,4 +23,28 @@ public class MaxTest {
         assertThat(result, is(5));
     }
 
+    @Test
+    public void whenMax5To2And3Then5() {
+        int result = Max.max(2, 3, 5);
+        assertThat(result, is(5));
+    }
+
+    @Test
+    public void whenMax9To5And2Then9() {
+        int result = Max.max(9, 5, 2);
+        assertThat(result, is(9));
+    }
+
+    @Test
+    public void whenMax7To2And4And5Then7() {
+        int result = Max.max(2, 5, 4, 7);
+        assertThat(result, is(7));
+    }
+
+    @Test
+    public void whenMax8To5And7And1Then8() {
+        int result = Max.max(8, 5, 1, 7);
+        assertThat(result, is(8));
+    }
+
 }
