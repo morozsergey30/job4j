@@ -101,14 +101,16 @@ public class Tracker {
      * @return Массив объектов.
      */
     public Item[] findByName(String name) {
-        Item[] names = new Item[position];
+        Item[] temp = new Item[position];
         int count = 0;
         for (int index = 0; index < this.items.length; index++) {
             if (this.items[index] != null && (this.items[index].getName()).equals(name)) {
-                names[count++] = this.items[index];
+                temp[count++] = this.items[index];
             }
         }
-        return names;
+        Item[] result = new Item[count];
+        System.arraycopy(temp, 0, result, 0, count);
+        return result;
     }
 
     /**

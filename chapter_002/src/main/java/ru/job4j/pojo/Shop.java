@@ -2,7 +2,7 @@ package ru.job4j.pojo;
 
 public class Shop {
     public static void main(String[] args) {
-        Product[] products = new Product[5];
+        Product[] products = new Product[3];
         products[0] = new Product("Milk", 10);
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
@@ -31,10 +31,10 @@ public class Shop {
     }
 
     public Product[] delete(Product[] products, int index) {
-        products[index] = null;
         for ( ; index < products.length - 1; index++) {
             products[index] = products[index + 1];
         }
+        products[index] = null;
         return products;
     }
 }
